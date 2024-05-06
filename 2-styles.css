@@ -1,0 +1,62 @@
+/* Styles pour le conteneur du toggle */
+.toggle {
+	position: relative;
+	width: 150px;
+	height: 50px;
+  }
+.toggle-inner {
+	top: 5px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #ebebeb; /* Couleur de fond lorsque le toggle est désactivé */
+	border: 2px solid lightgray;
+	border-radius: 30px; /* Coins arrondis */
+	transition: background-color 0.3s ease; /* Transition de couleur de fond */
+	color: rgba(145, 145, 145, 0.724);
+	font-size: 30px;
+	font-weight: 700;
+	font-family: Arial, sans-serif;
+}
+.toggle-inner::before {
+	content: "No";
+	position: absolute;
+	top: 20%;
+	right: 30px;
+}
+.toggle-switch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60px; /* Largeur du switch */
+	height: 60px; /* Hauteur du switch */
+	background-color: #fff; /* Couleur du switch */
+	border: 2px solid rgb(145, 145, 145);
+	border-radius: 50%; /* Faire un cercle */
+	transition: transform 0.3s ease; /* Transition de position */
+}
+.toggle-label {
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer; /* Indique que le curseur est un pointeur */
+}
+/* Styles pour le input checkbox */
+.toggle-cb {
+	display: none; /* Masquer l'input checkbox */
+}
+/* Styles lorsque le toggle est coché */
+.toggle-cb:checked + .toggle-label .toggle-inner {
+	background-color: rgb(230, 0, 0); /* Couleur de fond lorsque le toggle est activé */
+	color: white;
+}
+.toggle-cb:checked + .toggle-label .toggle-inner::before {
+	content: "Yes";
+	position: absolute;
+	top: 20%;
+	left: 30px;
+}
+.toggle-cb:checked + .toggle-label .toggle-switch {
+	transform: translateX(90px);
+}

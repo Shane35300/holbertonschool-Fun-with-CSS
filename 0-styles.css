@@ -1,16 +1,40 @@
 /* Définition de l'image sprite */
+body ul {
+	display: flex;
+	justify-content: space-around;
+}
+body ul li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	list-style: none;
+    width: 320px;
+    height: 440px;
+    border: black 2px solid;
+	border-radius: 10px;
+	background-image: url('0-sprite.png');
+	background-size: 500%;
+	padding-top: 20px;
+	font-size: 30px;
+	font-weight: 900;
+}
+
 .icon {
-    background-image: url('/images/0-sprite.png');
-    background-repeat: no-repeat;
-    width: 50px; /* Largeur de chaque image individuelle */
-    height: 50px; /* Hauteur de chaque image individuelle */
+    background-image: url('0-sprite.png');
+	display: inline-block;
+    width: 100%; /* Largeur de chaque image individuelle */
+    height: 100%; /* Hauteur de chaque image individuelle */
+	border-radius: 10px;
 }
 
 /* Définition de la position de chaque image individuelle */
-.i-html {
-    background-position: 0 0; /* Position de la première image */
+body ul li .i-html {
+    background-position: -4% 0; /* Position de la première image */
 }
 
-.i-css {
-    background-position: -50px 0; /* Position de la deuxième image */
+body ul li .i-css {
+    background-position: 50% 0; /* Position de la deuxième image */
+}
+body ul li .i-js {
+    background-position: 103% 0; /* Position de la deuxième image */
 }

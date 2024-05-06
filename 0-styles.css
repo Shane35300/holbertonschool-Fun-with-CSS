@@ -1,0 +1,16 @@
+/* Définition de l'image sprite */
+.icon {
+    background-image: url('/images/0-sprite.png');
+    background-repeat: no-repeat;
+    width: 50px; /* Largeur de chaque image individuelle */
+    height: 50px; /* Hauteur de chaque image individuelle */
+}
+
+/* Définition de la position de chaque image individuelle */
+.i-html {
+    background-position: 0 0; /* Position de la première image */
+}
+
+.i-css {
+    background-position: -50px 0; /* Position de la deuxième image */
+}

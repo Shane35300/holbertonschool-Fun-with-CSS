@@ -1,0 +1,21 @@
+body h2 a {
+	position: relative;
+	color: rgba(128, 0, 96, 0.797);
+	text-decoration: none;
+}
+a::before {
+	content: "";
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	bottom: 0px;
+	left: 0;
+	background-color: rgba(128, 0, 96, 0.797);
+	transition: width ease-out .4s;
+}
+a:hover::before {
+	width: 100%;
+}
+body h2 a:hover {
+	cursor: pointer;
+}

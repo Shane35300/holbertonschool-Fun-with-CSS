@@ -1,0 +1,20 @@
+body nav label {
+	display: block;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: rgb(197, 0, 0);
+}
+.menu-line::before {
+	content: "";
+	position: absolute;
+	left: 20px;
+	width: 20px;
+	height: 2px;
+	background-color: white;
+}
+
+.menu-line-1::before {
+	top: 20px;
+}

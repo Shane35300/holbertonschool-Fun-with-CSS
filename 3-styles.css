@@ -1,20 +1,107 @@
+#menu-open {
+	display:none;
+}
+.menu-item {
+	display: none;
+}
+nav {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 body nav label {
 	display: block;
 	position: relative;
+	margin-top: 5px;
 	width: 60px;
 	height: 60px;
 	border-radius: 30px;
 	background-color: rgb(197, 0, 0);
+	border: 2px solid rgb(150, 0, 0);
+	transition: all 0.3s ease;
+	cursor: pointer;
 }
-.menu-line::before {
+body nav label:hover {
+	margin-top: 0;
+	width: 70px;
+	height: 70px;
+	border-radius: 35px;
+}
+.menu-line-1::before {
 	content: "";
 	position: absolute;
+	top: 20px;
 	left: 20px;
 	width: 20px;
 	height: 2px;
 	background-color: white;
+	transition: all 0.3s ease;
 }
+.menu-line-2::before {
+	content: "";
+	position: absolute;
+	top: 27px;
+	left: 20px;
+	width: 20px;
+	height: 2px;
+	background-color: white;
+	transition: all 0.3s ease;
+}
+.menu-line-3::before {
+	content: "";
+	position: absolute;
+	top: 34px;
+	left: 20px;
+	width: 20px;
+	height: 2px;
+	background-color: white;
+	transition: all 0.3s ease;
+}
+body nav label:hover .menu-line-1::before {
+	top: 25px;
+	left: 25px;
+}
+body nav label:hover .menu-line-2::before {
+	top: 32px;
+	left: 25px;
+}
+body nav label:hover .menu-line-3::before {
+	top: 39px;
+	left: 25px;
+}
+.menu-open:checked ~ .menu-item {
+	display: block;
+}
+.menu-open:checked ~ .menu-open-button .menu-line-1::before {
+	transform: translateY(7px) rotate(45deg);
+}
+.menu-open:checked ~ .menu-open-button .menu-line-2 {
+	opacity: 0;
+}
+.menu-open:checked ~ .menu-open-button .menu-line-3::before {
+	transform: translateY(-7px) rotate(-45deg);
+}
+.menu-item {
+	position: relative;
+	margin-top: 20px;
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+	background-color: rgb(197, 0, 0);
+	border: 2px solid rgb(150, 0, 0);
 
-.menu-line-1::before {
-	top: 20px;
+}
+.menu-item .fa {
+	position: absolute;
+	top: 22px;
+	left: 22px;
+	color: white;
+}
+.menu-item:hover {
+	cursor: pointer;
+	background-color: white;
+}
+.menu-item:hover .fa {
+	color: rgb(197, 0, 0);
 }
